@@ -61,14 +61,18 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     const res = await fetch(`${BASEURL}/ecommerce/products`);
     const final = await res.json();
-    console.log("final", final);
-    const a = final.data.products
-    let product = a.find(p => p._id == productId)
-    // console.log(a)
-    // if (product) {
-    //     document.querySelector(".product-img")
-    //     document.querySelector(".product-price").textContent = a.price
-    //     document.querySelector(".product-name").textContent = a.name
-    //     document.querySelector(".product-description").textContent = a.description
-    // }
+    console.log("final", final.data.products);
+    const a = final.data.products;
+    let product = a.find(p => {
+        console.log(productId)
+        p._id === productId
+    })
+    console.log(product)
+    if (product) {
+        console.log(a)
+        document.querySelector(".product-img")
+        document.querySelector(".product-price").textContent = product.price;
+        document.querySelector(".product-name").textContent = product.name;
+        document.querySelector(".product-description").textContent = product.description;
+    }
 })
