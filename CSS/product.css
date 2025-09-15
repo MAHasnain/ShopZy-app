@@ -7,7 +7,64 @@
 html, body {
     height: 100%;
     width: 100%;
+    background-color: var(--Off-White);
 }
+
+@font-face {
+    font-family: "SpaceGrotesk-light";
+    src: url(../assets/fonts/SpaceGrotesk-Light.ttf);
+}
+
+@font-face {
+    font-family: "SpaceGrotesk-Regular";
+    src: url(../assets/fonts/SpaceGrotesk-Regular.ttf);
+}
+
+@font-face {
+    font-family: "SpaceGrotesk-Bold";
+    src: url(../assets/fonts/SpaceGrotesk-Bold.ttf);
+}
+
+@font-face {
+    font-family: "SpaceGrotesk-Med";
+    src: url(../assets/fonts/SpaceGrotesk-Medium.ttf);
+}
+
+@font-face {
+    font-family: "SpaceGrotesk-SBold";
+    src: url(../assets/fonts/SpaceGrotesk-SemiBold.ttf);
+}
+
+@font-face {
+    font-family: "ClashDisplay-Extralight";
+    src: url(../assets/fonts/ClashDisplay-Extralight.otf);
+}
+
+@font-face {
+    font-family: "ClashDisplay-Light";
+    src: url(../assets/fonts/ClashDisplay-Light.otf);
+}
+
+@font-face {
+    font-family: "ClashDisplay-Reg";
+    src: url(../assets/fonts/ClashDisplay-Regular.otf);
+}
+
+@font-face {
+    font-family: "ClashDisplay-Med";
+    src: url(../assets/fonts/ClashDisplay-Medium.otf);
+}
+
+@font-face {
+    font-family: "ClashDisplay-SBold";
+    src: url(../assets/fonts/ClashDisplay-Semibold.otf);
+}
+
+@font-face {
+    font-family: "ClashDisplay-Bold";
+    src: url(../assets/fonts/ClashDisplay-Bold.otf);
+}
+
 
 :root {
     --vibrantPurple: #8E2DE2;
@@ -40,6 +97,7 @@ html, body {
 
 /* Top navbar  */
 .navbar {
+    font-family: "SpaceGrotesk-Regular";
     display: flex;
     justify-content: space-between;
     padding: 20px;
@@ -116,6 +174,7 @@ html, body {
 /* categories nav */
 
 #category-wrapper {
+    font-family: "SpaceGrotesk-Regular";
     position: relative;
     display: flex;
     align-items: center;
@@ -151,4 +210,35 @@ html, body {
     background-color: transparent;
     background: none;
     outline: none;
+}
+
+
+/* Products section */
+
+#products_section {
+    font-family: "ClashDisplay-Reg";
+}
+
+.products_container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between  ;
+    padding: 20px;
+}
+
+.product-card {
+    background-color: var(--White);
+    margin: 5px 2.5px;
+    width: 20%;
+    cursor: pointer;
+}
+
+.product-price {
+
+}
+
+.product-name {}
+
+.product-description {
+    font-family: "SpaceGrotesk-Regular";
 }
