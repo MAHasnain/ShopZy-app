@@ -1,6 +1,7 @@
 const BASEURL = `https://backend-app-jy56.onrender.com/api/v1`
 
 const nav_categories = document.querySelector(".category_container");
+const cart_btn = document.querySelector("#cart_btn");
 
 document.addEventListener("DOMContentLoaded", async () => {
     // const options = {}
@@ -26,53 +27,63 @@ document.querySelector(".scroll-btn.right").addEventListener("click", () => {
 
 const products_container = document.querySelector(".products_container");
 document.addEventListener("DOMContentLoaded", async () => {
-    const response = await fetch(`${BASEURL}/ecommerce/products?page=1&limit=20`);
-    const data = await response.json();
-    // console.log(data);
+    try {
+        const response = await fetch(`${BASEURL}/ecommerce/products?page=1&limit=20`);
+        const data = await response.json();
+        // console.log(data);
 
-    const products = data.data.products;
+        const products = data.data.products;
 
-    products_container.innerHTML = "";
-    products.map(product => {
-        console.log(product)
+        products_container.innerHTML = "";
+        const productHeading = document.createElement("h4")
+        productHeading.textContent = "All Products";
+        // document.getElementById("#products_section").appendChild(productHeading)
+        products.map(product => {
+            // console.log(product)
 
-        products_container.innerHTML += `
+            products_container.innerHTML += `
          <div class="product-card" data-id="${product._id}">
                 <img src="${product.mainImage.url}" width=200px alt="">
-                    <div class="product-price"><h4>${product.price}</h4></div>
+                    <div class="product-price"><h4>Rs. ${product.price}</h4></div>
                     <div class="product-name"><p>${product.name}</p></div>
                     <div class="product-description"><p>${product.description}</p></div>
+                    <button id="cart_btn">Add to Cart</button>
                 </div>`
 
-    })
-    const productCard = document.querySelectorAll(".product-card");
-    // console.log(productCard)
-    productCard.forEach(card => {
-        card.addEventListener("click", async (e) => {
-            e.preventDefault();
-            const productId = card.getAttribute("data-id");
-
-            window.location.href = `/HTML/product.html?id=${productId}`
         })
-    })
+        const productCard = document.querySelectorAll(".product-card");
+        // console.log(productCard)
+        productCard.forEach(card => {
+            card.addEventListener("click", async () => {
+                const cardId = card.getAttribute("data-id")
 
-    const params = new URLSearchParams(window.location.search);
-    const productId = params.get("id");
+                window.location.href = `/HTML/product.html?id=${cardId}`
+                const params = new URLSearchParams(window.location.search);
+                const productId = params.get("id");
+                console.log(productId)
 
-    const res = await fetch(`${BASEURL}/ecommerce/products`);
-    const final = await res.json();
-    console.log("final", final.data.products);
-    const a = final.data.products;
-    let product = a.find(p => {
-        console.log(productId)
-        p._id === productId
-    })
-    console.log(product)
-    if (product) {
-        console.log(a)
-        document.querySelector(".product-img")
-        document.querySelector(".product-price").textContent = product.price;
-        document.querySelector(".product-name").textContent = product.name;
-        document.querySelector(".product-description").textContent = product.description;
+                try {
+                    const res = await fetch(`${BASEURL}/ecommerce/products?page=1&limit=100`);
+                    const productData = await res.json();
+                    console.log(productData.data);
+
+                    const productList = productData?.data?.products;
+                    console.log(productList)
+                    const product = productList.find(product => product._id === productId)
+
+                    console.log(product)
+
+                } catch (error) {
+                    console.error(error)
+                }
+            })
+        })
+
+    } catch (error) {
+        console.error(error);
     }
 })
+
+// cart_btn.addEventListener("click", () => {
+//     console.log("cliickedddd")
+// })
