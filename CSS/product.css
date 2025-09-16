@@ -217,28 +217,182 @@ html, body {
 
 #products_section {
     font-family: "ClashDisplay-Reg";
+    height: 70vh;
 }
 
 .products_container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between  ;
+    justify-content: start;
     padding: 20px;
 }
 
 .product-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: small;
     background-color: var(--White);
-    margin: 5px 2.5px;
-    width: 20%;
+    margin: 5px 15px;
+    width: 22%;
     cursor: pointer;
+    padding: 15px;
+    border-radius: 30px;
+    box-shadow: -1px 1px 12px -10px rgba(0, 0, 0, 0.75);
 }
 
-.product-price {
+.product-card:hover {
+    box-shadow: -1px 1px 12px -7px rgba(0, 0, 0, 0.75);
 
 }
 
-.product-name {}
+.product-price {}
+
+.product-name {
+    font-size: large;
+}
 
 .product-description {
     font-family: "SpaceGrotesk-Regular";
+    padding: 0 5px;
+}
+
+#cart_btn {
+    font-size: large;
+    padding: 10px;
+    color: var(--White);
+    border: none;
+    background-color: var(--brightCyan);
+    border-radius: 50px;
+}
+
+#cart_btn:hover {
+    box-shadow: -1px 1px 12px -6px rgba(0, 0, 0, 0.75);
+}
+
+#categories_section {
+    font-family: "ClashDisplay-Reg";
+    padding: 20px 10px;
+}
+
+
+/* Footer section */
+footer {
+    background-color: var(--SlateGray);
+    font-family: "SpaceGrotesk-Regular";
+    color: var(--Off-White);
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer a {
+    color: var(--CoolGray);
+
+}
+
+.main-footer {
+    padding: 50px 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 10px;
+}
+
+.footer-logo {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    /* justify-content: space-between; */
+}
+
+.footer-logo p {
+    color: var(--CoolGray);
+    font-size: small;
+    text-align: justify;
+    width: 95%;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: start;
+    gap: 50px;
+}
+
+.social-icons i {
+    font-size: xx-large;
+}
+
+.quickLinks {
+    width: 20%;
+}
+
+.customerCare {
+    width: 20%;
+}
+
+.stayConnected {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.office-locations {}
+
+.address {
+    color: var(--CoolGray);
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    gap: 10px;
+}
+
+.footer-email {
+    border-radius: 11px;
+    display: flex;
+    background-color: #111111;
+    border: solid 1px #009FFF;
+}
+
+.footer-email input {
+    padding: 10px;
+    background: none;
+    border: none;
+}
+
+.footer-email input:focus {
+    outline: none;
+}
+
+.footer-email button {
+    padding: 10px;
+    background-color: var(--brightCyan);
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border: none;
+    color: var(--Off-White);
+
+}
+
+.sub-footer {
+    color: var(--Off-White);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+a {
+    text-decoration: none;
 }
