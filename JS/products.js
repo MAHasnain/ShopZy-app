@@ -1,4 +1,4 @@
-const BASEURL = `https://backend-app-jy56.onrender.com/api/v1`
+const BASEURL = `https://backend-app-jy56.onrender.com/api/v1`;
 
 const nav_categories = document.querySelector(".category_container");
 const cart_btn = document.querySelector("#cart_btn");
@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         productHeading.textContent = "All Products";
         // document.getElementById("#products_section").appendChild(productHeading)
         products.map(product => {
-            // console.log(product)
+            console.log(product)
 
             products_container.innerHTML += `
          <div class="product-card" data-id="${product._id}">
@@ -48,34 +48,15 @@ document.addEventListener("DOMContentLoaded", async () => {
                     <div class="product-name"><p>${product.name}</p></div>
                     <div class="product-description"><p>${product.description}</p></div>
                     <button id="cart_btn">Add to Cart</button>
-                </div>`
+                </div>`})
 
-        })
         const productCard = document.querySelectorAll(".product-card");
         // console.log(productCard)
         productCard.forEach(card => {
-            card.addEventListener("click", async () => {
+            card.addEventListener("click", async (e) => {
+                e.preventDefault()
                 const cardId = card.getAttribute("data-id")
-
                 window.location.href = `/HTML/product.html?id=${cardId}`
-                const params = new URLSearchParams(window.location.search);
-                const productId = params.get("id");
-                console.log(productId)
-
-                try {
-                    const res = await fetch(`${BASEURL}/ecommerce/products?page=1&limit=100`);
-                    const productData = await res.json();
-                    console.log(productData.data);
-
-                    const productList = productData?.data?.products;
-                    console.log(productList)
-                    const product = productList.find(product => product._id === productId)
-
-                    console.log(product)
-
-                } catch (error) {
-                    console.error(error)
-                }
             })
         })
 
