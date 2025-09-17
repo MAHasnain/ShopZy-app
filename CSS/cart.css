@@ -1,0 +1,304 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    background-color: var(--Off-White);
+}
+
+@font-face {
+    font-family: "SpaceGrotesk-light";
+    src: url(../assets/fonts/SpaceGrotesk-Light.ttf);
+}
+
+@font-face {
+    font-family: "SpaceGrotesk-Regular";
+    src: url(../assets/fonts/SpaceGrotesk-Regular.ttf);
+}
+
+@font-face {
+    font-family: "SpaceGrotesk-Bold";
+    src: url(../assets/fonts/SpaceGrotesk-Bold.ttf);
+}
+
+@font-face {
+    font-family: "SpaceGrotesk-Med";
+    src: url(../assets/fonts/SpaceGrotesk-Medium.ttf);
+}
+
+@font-face {
+    font-family: "SpaceGrotesk-SBold";
+    src: url(../assets/fonts/SpaceGrotesk-SemiBold.ttf);
+}
+
+@font-face {
+    font-family: "ClashDisplay-Extralight";
+    src: url(../assets/fonts/ClashDisplay-Extralight.otf);
+}
+
+@font-face {
+    font-family: "ClashDisplay-Light";
+    src: url(../assets/fonts/ClashDisplay-Light.otf);
+}
+
+@font-face {
+    font-family: "ClashDisplay-Reg";
+    src: url(../assets/fonts/ClashDisplay-Regular.otf);
+}
+
+@font-face {
+    font-family: "ClashDisplay-Med";
+    src: url(../assets/fonts/ClashDisplay-Medium.otf);
+}
+
+@font-face {
+    font-family: "ClashDisplay-SBold";
+    src: url(../assets/fonts/ClashDisplay-Semibold.otf);
+}
+
+@font-face {
+    font-family: "ClashDisplay-Bold";
+    src: url(../assets/fonts/ClashDisplay-Bold.otf);
+}
+
+
+:root {
+    --vibrantPurple: #8E2DE2;
+    --deepBlue: #4A00E0;
+    --brightCyan: #009FFF;
+    --Indigo: #2E3192;
+
+    --neonGreen: #39FF14;
+    /* → CTA buttons (Add to cart, Buy now) */
+    --electricOrange: #FF6B00;
+    /* → Alerts / discounts / banners*/
+    --cyberYellow: #FFD60A;
+    /*→ Highlighted elements (tags, stars, ratings)*/
+    --aquaBlue: #00F5D4;
+    /* → Hover states / secondary buttons*/
+
+    --White: #FFFFFF;
+    /* → Backgrounds */
+    --Off-White: #F5F5F5;
+    /* → Cards, sections*/
+    --CharcoalBlack: #111111;
+    /* → Text headings */
+    --SlateGray: #2C2C2C;
+    /*→ Body text */
+    --CoolGray: #9E9E9E;
+    /*→ Borders / muted text*/
+}
+
+
+.logo {}
+
+/* Top navbar  */
+.navbar {
+    font-family: "SpaceGrotesk-Regular";
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.search-bar {
+    display: flex;
+    justify-content: center;
+    background-color: var(--brightCyan);
+    border-radius: 50px;
+    width: 40%;
+    /* border: solid 1px black; */
+    padding: 20px;
+}
+
+.search-bar input {
+    color: var(--White);
+    background-color: transparent;
+    border: none;
+    outline: none;
+    margin: 0 5px;
+    width: 90%;
+}
+
+.search-bar input::placeholder {
+    color: var(--Off-White);
+}
+
+.search_bar input[type="text"] {
+    flex-grow: 1;
+    border: none;
+    background-color: transparent;
+    outline: none;
+    font-size: 16px;
+}
+
+.search-bar button {
+    font-size: larger;
+    color: var(--White);
+    background: none;
+    border: none;
+}
+
+.nav-icons {
+    display: flex;
+    justify-content: space-around;
+    width: 200px;
+}
+
+.nav-icons a {
+    color: var(--White);
+    padding: 10px;
+    font-size: larger;
+}
+
+.nav-icons .cart_btn {
+    background-color: var(--brightCyan);
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    border-radius: 50px;
+}
+
+.nav-icons .user_account {
+    background-color: var(--brightCyan);
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    border-radius: 50px;
+}
+
+#cart_btn {
+    padding: 10px;
+    color: var(--White);
+    border: none;
+    background-color: var(--brightCyan);
+    border-radius: 50px;
+}
+
+
+
+/* Footer section */
+footer {
+    background-color: var(--SlateGray);
+    font-family: "SpaceGrotesk-Regular";
+    color: var(--Off-White);
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer a {
+    color: var(--CoolGray);
+
+}
+
+.main-footer {
+    padding: 50px 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 10px;
+}
+
+.footer-logo {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    /* justify-content: space-between; */
+}
+
+.footer-logo p {
+    color: var(--CoolGray);
+    font-size: small;
+    text-align: justify;
+    width: 95%;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: start;
+    gap: 50px;
+}
+
+.social-icons i {
+    font-size: xx-large;
+}
+
+.quickLinks {
+    width: 20%;
+}
+
+.customerCare {
+    width: 20%;
+}
+
+.stayConnected {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.office-locations {}
+
+.address {
+    color: var(--CoolGray);
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    gap: 10px;
+}
+
+.footer-email {
+    border-radius: 11px;
+    display: flex;
+    background-color: #111111;
+    border: solid 1px #009FFF;
+}
+
+.footer-email input {
+    padding: 10px;
+    background: none;
+    border: none;
+}
+
+.footer-email input:focus {
+    outline: none;
+}
+
+.footer-email button {
+    padding: 10px;
+    background-color: var(--brightCyan);
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border: none;
+    color: var(--Off-White);
+
+}
+
+.sub-footer {
+    color: var(--Off-White);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+a {
+    text-decoration: none;
+}
