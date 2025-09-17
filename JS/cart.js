@@ -17,3 +17,4 @@ addToCartBtn.addEventListener("click", async (e) => {
         console.error(error)
     }
 })
+
