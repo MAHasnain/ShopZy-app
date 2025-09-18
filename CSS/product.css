@@ -275,6 +275,61 @@ html, body {
     padding: 20px 10px;
 }
 
+/* Single product page */
+.product-container {
+    font-family: "SpaceGrotesk-Regular";
+    padding: 30px;
+    height: 70vh;
+}
+
+
+.product-detail {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    gap: 50px;
+}
+
+.text-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.action-btns-section {
+    display: flex;
+    justify-content: start;
+    gap: 30px;
+}
+
+.action-btns-section input {
+    width: 100px;
+    height: 50px;
+    text-align: center;
+}
+
+.cartBtn {
+    font-size: large;
+    padding: 10px;
+    color: var(--White);
+    border: none;
+    background-color: var(--brightCyan);
+    border-radius: 10px;
+}
+
+.cartBtn:hover {
+    box-shadow: -1px 1px 12px -6px rgba(0, 0, 0, 0.75);
+}
+
+#change-Quantity button {
+    font-size: xx-large;
+    padding: 5px 10px;
+    color: var(--White);
+    border: none;
+    background-color: var(--CoolGray);
+    border-radius: 10px;
+}
 
 /* Footer section */
 footer {
