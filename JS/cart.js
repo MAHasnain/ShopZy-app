@@ -1,18 +1,15 @@
 const BASEURL = `https://backend-app-jy56.onrender.com/api/v1`;
 
-const addToCartBtn = document.querySelector("#addToCartBtn");
-addToCartBtn.addEventListener("click", async (e) => {
+
+document.addEventListener("DOMContentLoaded", async (e) => {
     e.preventDefault();
     try {
-        const options = {
-            method: 'POST',
-            headers: { accept: 'application/json', 'content-type': 'application/json' },
-            body: '{"quantity":4}'
-        };
-        const response = await fetch(`${BASEURL}/ecommerce/cart/item/${productId}`, options);
+        const options = { method: 'GET', headers: { accept: 'application/json', "Authorization": `Bearer ${localStorage.getItem("accessToken")}` } };
+
+        const response = await fetch(`${BASEURL}/ecommerce/cart`, options);
         const data = await response.json();
         console.log(data);
-        
+
     } catch (error) {
         console.error(error)
     }
