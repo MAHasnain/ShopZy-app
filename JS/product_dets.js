@@ -42,26 +42,29 @@ document.addEventListener("DOMContentLoaded", async () => {
 
             // Quantity update section
 
-            let count = 1
+            const productQty = document.querySelector(".qtyInp");
             document.querySelector(".qtyInc").addEventListener("click", (e) => {
                 e.preventDefault();
-                document.querySelector(".qtyInp").value++;
+                console.log(productQty.value);
+                productQty.value = parseInt(productQty.value) + 1;
             })
             document.querySelector(".qtyDec").addEventListener("click", (e) => {
                 e.preventDefault();
-                if (count > 1) {
-                    document.querySelector(".qtyInp").value--;
+                let currentVal = parseInt(productQty.value);
+                if (currentVal > 1) {
+                    productQty.value = currentVal - 1;
                 }
             })
 
-            // const cartBtn = document.querySelector(".cartBtn")
-            cartBtn.addEventListener("click", async (e) => {
+            const addToCartBtn = document.querySelector(".cartBtn")
+            addToCartBtn.addEventListener("click", async (e) => {
+                console.log("Cart button clicked..")
                 e.preventDefault();
                 try {
                     const options = {
                         method: 'POST',
-                        headers: { accept: 'application/json', 'content-type': 'application/json' },
-                        body: `{"quantity":${qtyInp.value}}`
+                        headers: { accept: 'application/json', 'content-type': 'application/json', "Authorization": `Bearer ${localStorage.getItem("accessToken")}` },
+                        body: `{"quantity":${productQty.value}}`
                     };
                     const response = await fetch(`${BASEURL}/ecommerce/cart/item/${productId}`, options)
                     const data = await response.json();
