@@ -6,6 +6,7 @@ const loginPassInp = document.querySelector("#loginPassInp")
 const loginBtn = document.querySelector("#loginBtn");
 loginBtn.addEventListener("click", async (e) => {
     e.preventDefault();
+    console.log("Login Button clicked...")
     try {
         const options = {
             method: 'POST',
@@ -15,7 +16,7 @@ loginBtn.addEventListener("click", async (e) => {
 
         const response = await fetch(`${BASEURL}/users/login`, options);
         const data = await response.json();
-        // console.log(data.data.accessToken);
+        console.log(data.data.accessToken);
 
         if (data.success) {
             // console.log(data.data.accessToken);
