@@ -9,7 +9,11 @@ document.addEventListener("DOMContentLoaded", async () => {
         const data = await response.json();
         console.log(data);
 
+        if (data.success) {
 
+        } else {
+            document.querySelector(".user-account").innerHTML = `<div class="">Please <a href="./login.html">Login</a> or <a href="./register.html">Register</a></div>`
+        }
 
     } catch (error) {
         console.error(error)
@@ -29,6 +33,7 @@ logoutBtn.addEventListener("click", async (e) => {
         console.log(data);
         if (data.success) {
             localStorage.removeItem("accessToken");
+            window.location.href = `../HTML/login.html`
         }
     } catch (error) {
         console.error(error);

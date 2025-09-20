@@ -175,11 +175,13 @@ html, body {
 /* Registration */
 .register_container {
     height: 70vh;
+    font-family: "SpaceGrotesk-Regular";
 }
 
 /* Login */
 .login_container {
     height: 70vh;
+    font-family: "SpaceGrotesk-Regular";
 }
 
 

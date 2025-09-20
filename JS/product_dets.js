@@ -70,6 +70,11 @@ document.addEventListener("DOMContentLoaded", async () => {
                     const data = await response.json();
                     console.log(productId)
                     console.log(data);
+
+                    if (data.statusCode == 401) {
+                        window.location.href = `../HTML/login.html`;
+                    }
+
                 } catch (error) {
                     console.error(error);
                 }

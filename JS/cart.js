@@ -76,6 +76,8 @@ document.addEventListener("DOMContentLoaded", async (e) => {
                     console.error(error);
                 }
             })
+        } else {
+            document.querySelector(".cart-section").innerHTML = `<div class="">Please <a href="./login.html">Login</a> or <a href="./register.html">Register</a></div>`
         }
 
     } catch (error) {

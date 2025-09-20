@@ -21,6 +21,9 @@ loginBtn.addEventListener("click", async (e) => {
         if (data.success) {
             // console.log(data.data.accessToken);
             JSON.stringify(localStorage.setItem("accessToken", data.data.accessToken));
+            window.location.href = `../index.html`
+        } else {
+            
         }
 
     } catch (error) {
