@@ -212,12 +212,48 @@ html, body {
     outline: none;
 }
 
+/* categories section */
+.categories_section {
+    /* background-color: var(--CoolGray); */
+}
+
+.main-categories {
+    display: flex;
+    /* justify-content: start; */
+    flex-wrap: wrap;
+}
+
+.main-category {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--brightCyan);
+    margin: 10px;
+    width: 120px;
+    height: 120px;
+    color: var(--Off-White);
+    border-radius: 10px;
+    text-align: center;
+    padding: 10px;
+}
+
+/* category page */
+
+.category-main-heading {
+    font-family: "ClashDisplay-Med";
+
+}
+
+.category-container {
+    font-family: "SpaceGrotesk-Regular";
+
+}
 
 /* Products section */
 
 #products_section {
     font-family: "ClashDisplay-Reg";
-    height: 70vh;
+    /* height: 70vh; */
 }
 
 .products_container {
