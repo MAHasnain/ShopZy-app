@@ -219,11 +219,12 @@ html, body {
 
 .main-categories {
     display: flex;
-    /* justify-content: start; */
+    justify-content: center;
     flex-wrap: wrap;
 }
 
 .main-category {
+    cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -235,6 +236,13 @@ html, body {
     border-radius: 10px;
     text-align: center;
     padding: 10px;
+    box-shadow: -1px 1px 12px -10px rgba(0, 0, 0, 0.75);
+
+}
+
+.main-category:hover {
+    box-shadow: 0px 0px 15px -7px rgba(0, 0, 0, 0.75);
+
 }
 
 /* category page */
