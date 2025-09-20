@@ -323,7 +323,7 @@ html, body {
 .product-container {
     font-family: "SpaceGrotesk-Regular";
     padding: 30px;
-    height: 70vh;
+    /* height: 70vh; */
 }
 
 
