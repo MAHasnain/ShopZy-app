@@ -12,9 +12,40 @@ document.addEventListener("DOMContentLoaded", async () => {
     const categoryNames = data.data.categories;
     // console.log(categoryNames)
     categoryNames.map(category => {
-        nav_categories.innerHTML += `<div class="category">${category.name}</div>`
+        nav_categories.innerHTML += `<div class="category" data-id="${category._id}">${category.name}</div>`
     })
 
+})
+
+const mainCategories = document.querySelector(".main-categories");
+document.addEventListener("DOMContentLoaded", async () => {
+    try {
+
+        const response = await fetch(`${BASEURL}/ecommerce/categories?page=1&limit=20`);
+        const data = await response.json();
+        console.log(data.data.categories);
+
+        const categories = data.data.categories;
+        categories.map(category => {
+
+            mainCategories.innerHTML += `
+            <div class="main-category" data-id="${category._id}">
+            <div class="name">${category.name}</div>
+            </div>`
+        })
+
+        const categoriesContainer = document.querySelectorAll(".main-category");
+        categoriesContainer.forEach(category => {
+            // console.log(category)
+            category.addEventListener("click", () => {
+                const categoryId = category.getAttribute("data-id");
+                window.location.href = `../HTML/category.html?id=${categoryId}`;
+            })
+        })
+
+    } catch (error) {
+        console.error(error);
+    }
 })
 
 const container = document.querySelector(".category_container");
