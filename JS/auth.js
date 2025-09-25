@@ -34,12 +34,12 @@ document.addEventListener("DOMContentLoaded", async () => {
                 const userAddress = data?.data?.addresses
 
                 if (data?.success) {
-                    addressLine1.innerHTML = `<p>${userAddress?.[0].addressLine1}</p>`
-                    addressLine2.innerHTML = `<p>${userAddress?.[0].addressLine2}</p>`
-                    addressPincode.innerHTML = `<p>${userAddress?.[0].pincode}</p>`
-                    addressCity.innerHTML = `<p>${userAddress?.[0].city}</p>`
-                    addressState.innerHTML = `<p>${userAddress?.[0].state}</p>`
-                    addressCountry.innerHTML = `<p>${userAddress?.[0].country}</p>`
+                    addressLine1.innerHTML = `<label for="addressLine1">Address 1</label><p>${userAddress?.[0].addressLine1}</p>`
+                    addressLine2.innerHTML = `<label for="addressLine2">Address 2</label><p>${userAddress?.[0].addressLine2}</p>`
+                    addressPincode.innerHTML = `<label for="addressPincode">Pin code</label><p>${userAddress?.[0].pincode}</p>`
+                    addressCity.innerHTML = `<label for="addressCity">City</label><p>${userAddress?.[0].city}</p>`
+                    addressState.innerHTML = `<label for="addressState">State</label><p>${userAddress?.[0].state}</p>`
+                    addressCountry.innerHTML = `<label for="addressCountry">Country</label><p>${userAddress?.[0].country}</p>`
                 }
 
             } catch (error) {
@@ -53,11 +53,12 @@ document.addEventListener("DOMContentLoaded", async () => {
 
                 if (data?.success) {
                     userAvatar.innerHTML = `<img width= src="${currentUser?.avatar?.url}" alt="" srcset="">`
-                    userfName.innerHTML = `<p>${data?.data?.firstName}</p>`
-                    userlName.innerHTML = `<p>${data?.data?.lastName}</p>`
-                    useremail.innerHTML = `<p>${currentUser.email}</p>`
-                    userUsername.innerHTML = `<p>${currentUser.username}</p>`
-                    userpNumber.innerHTML = `<p>${data?.data?.countryCode} ${data?.data?.phoneNumber}</p>`
+                    userfName.innerHTML = `<label for="user-fName" id="first-name">First Name</label><p>${data?.data?.firstName}</p>`
+                    userlName.innerHTML = `<label for="user-lName">Last Name</label><p>${data?.data?.lastName}</p>`
+                    useremail.innerHTML = `<label for="user-email" id="email">Email</label><p>${currentUser.email}</p>`
+                    userUsername.innerHTML = `
+                            <label for="user-username" id="username">Username</label><p>${currentUser.username}</p>`
+                    userpNumber.innerHTML = `<label for="addressCountry">Country</label><p>${data?.data?.countryCode} ${data?.data?.phoneNumber}</p>`
                 }
 
             } catch (error) {
