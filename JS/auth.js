@@ -1,5 +1,5 @@
 const BASEURL = `https://backend-app-jy56.onrender.com/api/v1`;
-const navBtnContainer = document.querySelector(".logout-btn");
+const navBtnContainer = document.querySelector(".auth-btns");
 
 const userAvatar = document.querySelector(".user-avatar");
 const userfName = document.querySelector(".user-fName");

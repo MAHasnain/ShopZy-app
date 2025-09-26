@@ -176,12 +176,141 @@ html, body {
 .register_container {
     height: 70vh;
     font-family: "SpaceGrotesk-Regular";
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 50px;
+
+}
+
+.register_container h3 {
+    font-family: "ClashDisplay-Med";
+    font-size: xx-large;
+}
+
+.register-form form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.register-form button {
+    width: 50%;
+    border: none;
+    background: none;
+    background-color: var(--White);
+    border-radius: 10px;
+    padding: 10px 15px;
+    box-shadow: 0px 0px 15px -13px rgba(0, 0, 0, 0.75);
+}
+
+.register-form button:hover {
+    box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
 }
 
 /* Login */
 .login_container {
     height: 70vh;
     font-family: "SpaceGrotesk-Regular";
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 50px;
+}
+
+.login_container h3 {
+    font-family: "ClashDisplay-Med";
+    font-size: xx-large;
+}
+
+.login-form form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.login-form button {
+    width: 50%;
+    border: none;
+    background: none;
+    background-color: var(--White);
+    border-radius: 10px;
+    padding: 10px 15px;
+    box-shadow: 0px 0px 15px -13px rgba(0, 0, 0, 0.75);
+}
+
+.login-form button:hover {
+    box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
+}
+
+.form-inputs {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 10px;
+}
+
+.form-inputs input {
+    background-color: var(--White);
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    width: 400px;
+    box-shadow: 0px 0px 15px -13px rgba(0, 0, 0, 0.75);
+}
+
+/* User account page */
+
+.auth-btns button {
+    border: none;
+    background: none;
+    background-color: var(--White);
+    border-radius: 10px;
+    padding: 10px 15px;
+    box-shadow: 0px 0px 15px -13px rgba(0, 0, 0, 0.75);
+}
+
+.auth-btns a {
+    color: var(--CharcoalBlack);
+}
+
+.auth-btns button:hover {
+    box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
+}
+
+.user-account {
+    font-family: "SpaceGrotesk-Regular";
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    justify-content: center;
+    align-items: center;
+    min-height: 70vh;
+}
+
+.user-account p {
+    background-color: var(--White);
+    border-radius: 10px;
+    padding: 10px;
+    width: 60%;
+}
+
+.user-info {
+    width: 60vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.info-line {
+    display: flex;
+    justify-content: center;
+    gap: 50;
 }
 
 
