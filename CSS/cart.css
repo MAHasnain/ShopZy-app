@@ -266,6 +266,95 @@ html, body {
     color: var(--CharcoalBlack);
 }
 
+
+/* Checkout section              //////////////////////////////////////////////////////////////////////////////////////////////// */
+
+.checkout-section {
+    font-family: "SpaceGrotesk-Regular";
+    color: var(--CharcoalBlack);
+}
+
+.savedAddresses-container {
+    /* background-color: var(--CoolGray); */
+    padding: 30px 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.linkedBtns {
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+
+#placeOrder, #addAddress {
+    border: none;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
+}
+
+#placeOrder:hover {
+    box-shadow: 0px 0px 15px -8px rgba(0, 0, 0, 0.75);
+}
+
+#addAddress:hover {
+    box-shadow: 0px 0px 15px -8px rgba(0, 0, 0, 0.75);
+}
+
+.newAddress-form {
+    display: flex;
+    justify-content: center;
+}
+
+.newAddress-form form {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    width: 50%;
+}
+
+#form-inputs {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 50px;
+    gap: 5px;
+}
+#form-button{
+    display: flex;
+    justify-content: center;
+}
+
+#addressLine1Inp, #addressLine2Inp, #pincodeInp, #stateInp, #cityInp, #countryInp, #saveAddress {
+    border: none;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+#saveAddress {
+    width: 100px;
+    margin: 20px;
+    box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
+}
+
+#saveAddress:hover {
+    box-shadow: 0px 0px 15px -8px rgba(0, 0, 0, 0.75);
+}
+
+.userAddress {
+    display: flex;
+    justify-content: space-between;
+    color: var(--SlateGray);
+    padding: 5px 20px;
+}
+
+.deleteAddress {
+    background: none;
+    border: none;
+}
+
+
 /* Footer section */
 footer {
     background-color: var(--SlateGray);
