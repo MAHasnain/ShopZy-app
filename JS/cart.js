@@ -77,7 +77,12 @@ document.addEventListener("DOMContentLoaded", async (e) => {
                 }
             })
         } else {
-            document.querySelector(".cart-section").innerHTML = `<div class="">Please <a href="./login.html">Login</a> or <a href="./register.html">Register</a></div>`
+            document.querySelector(".cart-section").innerHTML = `<div class="cart-logout-page"><p>Your cart is waiting. Please log in to view and checkout your items.</p>
+            <div class="cart-page-btns">
+            <button id="login"><a href="../HTML/login.html">Login</a></button>
+            <button id="register"><a href="../HTML/register.html">Register</a></button>
+            </div>
+            </div>`
         }
 
     } catch (error) {
