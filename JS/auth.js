@@ -89,7 +89,8 @@ document.addEventListener("DOMContentLoaded", async () => {
             })
 
         } else {
-            document.querySelector(".user-account").innerHTML = `<div class="">Please <a href="./login.html">Login</a> or <a href="./register.html">Register</a></div>`;
+            document.querySelector(".user-account").innerHTML = `<div class="account-logout-page"> <h4>Welcome to Shopzy</h4> <p class=""> Log in to see your orders, saved addresses, and account details.</p>  
+            <div><button><a href="./login.html">Login</a></button> <button><a href="./register.html">Register</a></button></div></div>`;
 
             navBtnContainer.innerHTML = `<button id="logIn-btn">
                     <a href="../HTML/login.html">Log in</a>

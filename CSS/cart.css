@@ -207,6 +207,7 @@ html, body {
 }
 
 .cart-page-btns button:hover {
+    background-color: var(--Off-White);
     box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
 }
 
@@ -331,6 +332,7 @@ html, body {
 }
 
 #addAddress:hover {
+    background-color: var(--Off-White);
     box-shadow: 0px 0px 15px -8px rgba(0, 0, 0, 0.75);
 }
 
@@ -371,6 +373,7 @@ html, body {
 }
 
 #saveAddress:hover {
+    background-color: var(--Off-White);
     box-shadow: 0px 0px 15px -8px rgba(0, 0, 0, 0.75);
 }
 

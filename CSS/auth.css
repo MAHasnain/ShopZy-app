@@ -208,6 +208,7 @@ html, body {
 }
 
 .register-form button:hover {
+    background-color: var(--Off-White);
     box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
 }
 
@@ -246,6 +247,7 @@ html, body {
 }
 
 .login-form button:hover {
+    background-color: var(--Off-White);
     box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
 }
 
@@ -281,6 +283,7 @@ html, body {
 }
 
 .auth-btns button:hover {
+    background-color: var(--Off-White);
     box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
 }
 
@@ -313,6 +316,43 @@ html, body {
     gap: 50;
 }
 
+.account-logout-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.account-logout-page h4 {
+    font-family: "ClashDisplay-Med";
+    font-size: xx-large;
+}
+
+.account-logout-page p {
+    text-align: center;
+    background: none;
+}
+
+.account-logout-page button {
+    border: none;
+    background: none;
+    background-color: var(--White);
+    border-radius: 10px;
+    padding: 10px 15px;
+    box-shadow: 0px 0px 15px -13px rgba(0, 0, 0, 0.75);
+    width: 100px;
+    margin: 10px;
+}
+
+.account-logout-page a {
+    color: var(--CharcoalBlack);
+}
+
+.account-logout-page button:hover {
+    background-color: var(--Off-White);
+    box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
+
+}
 
 /* Footer section */
 footer {
